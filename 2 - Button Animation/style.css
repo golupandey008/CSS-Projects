@@ -1,0 +1,35 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: #fff;
+}
+
+.box {
+     height: 100px;
+     width: 250px;
+     border-radius: 50px;
+     background: #000;
+}
+
+.box button {
+     height: 100%;
+     width: 100%;
+     border-radius: 50px;
+     border: 2px solid #000;
+     background: rgb(244, 244, 14);
+     color: #000;
+     font-size: 40px;
+     transition: all 0.3s ease;
+}
+
+.box button:hover {
+     transform: translateY(-12%);
+}
