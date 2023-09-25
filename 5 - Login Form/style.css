@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+     font-size: 62.5%;
+}
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-size: 1.6rem;
+     font-family: 'Poppins', sans-serif;
+}
+
+body {
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: #7d2ae8;
+     padding: 3rem;
+}
+
+.container {
+     position: relative;
+     max-width: 85rem;
+     width: 100%;
+     background-color: #fff;
+     padding: 4rem 3rem;
+     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+     perspective: 280rem;
+}
+
+.container .cover {
+     position: absolute;
+     height: 100%;
+     width: 50%;
+     left: 50%;
+     top: 0;
+     z-index: 1; 
+     transition: all 1s ease;  
+     transform-origin: left;
+     transform-style: preserve-3d;
+}
+
+.container .cover::before {
+     content: '';
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     background: #7d2ae8;
+     opacity: 0.5;
+}
+
+.container #flip {
+     opacity: 0;
+}
+
+.container #flip:checked ~ .cover {
+     transform: rotateY(-180deg);
+}
+
+.container .cover img {
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+     z-index: -1;
+     backface-visibility: hidden;
+}
+
+.container form {
+     height: 100%;
+     width: 100%;
+     background: #fff;
+}
+
+.container .form-content {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.form-content .login-form,
+.form-content .signup-form {
+     width: calc(100% / 2 - 25px);
+}
+
+form .form-content .title {
+     position: relative;
+     font-size: 2.4rem;
+     font-weight: 500;
+     color: #333;
+}
+
+form .form-content .title::before {
+     content: "";
+     height: 0.3rem;
+     width: 2.5rem;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     background: #7d2ae8;
+}
+
+form .signup-form .title::before {
+     width: 2rem;
+}
+
+form .form-content .input-boxes {
+     margin-top: 3rem;
+}
+
+form .form-content .input-box {
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 5rem;
+     width: 100%;
+     margin: 1rem 0;
+}
+
+form .form-content .input-box input {
+     height: 100%;
+     width: 100%;
+     outline: none;
+     border: none;
+     padding: 0 3rem;
+     font-size: 1.6rem;
+     font-weight: 500;
+     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+     transition: all 0.3s ease;
+}
+
+.form-content .input-box input:focus,
+.form-content .input-box input:valid {
+     border-color: #7d2ae8;
+}
+
+.form-content .input-box i {
+     position: absolute;
+     left: 0;
+     font-size: 2.2rem;
+     color: #7d2ae8;
+}
+
+form .form-content .text a {
+     text-decoration: none;
+     transition: all 0.3s ease;
+}
+
+form .form-content .text a:hover {
+     text-decoration: underline;
+}
+
+form .form-content .text {
+     font-size: 1.5rem;
+     font-weight: 500;
+     color: #333;
+}
+
+form .form-content .button {
+     color: #fff;
+     margin-top: 3.5rem;
+}
+
+form .form-content .button input {
+     color: #fff;
+     background: #7d2ae8;
+     border-radius: 0.6rem;
+     padding: 0;
+     cursor: pointer;
+     transition: all 0.4s ease;
+}
+
+form .form-content .button input:hover {
+     background: #5b13b9;
+}
+
+form .form-content label {
+     color: #5b13b9;
+     cursor: pointer;
+}
+
+form .form-content label:hover {
+     text-decoration: underline;
+}
+
+@media (width < 73rem) {
+     .container .cover {
+          display: none;
+     }
+
+     .form-content .login-form, 
+     .form-content .signup-form {
+          width: 100%;
+     }
+
+     .form-content .signup-form {
+          display: none;
+     }
+
+     .container #flip:checked ~ form .signup-form {
+          display: block;
+     }
+
+     .container #flip:checked ~ form .login-form {
+          display: none;
+     }
+}

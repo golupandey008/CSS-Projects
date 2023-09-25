@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Responsive Login Form</title>
+     <link rel="stylesheet" href="style.css">
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+     <div class="container">
+          <input type="checkbox" id="flip">
+          <div class="cover">
+               <div class="front">
+                    <img src="Images/front.jpg">
+               </div>
+          </div>
+          <form action="#">
+               <div class="form-content">
+                       <!-- Left Side Of Form -->
+               <div class="login-form">
+                    <div class="title">Login</div>
+                    <div class="input-boxes">
+                         <div class="input-box">
+                              <i class='bx bxs-envelope'></i>
+                              <input type="text" placeholder="Enter your email" required>
+                         </div>
+
+                         <div class="input-box">
+                              <i class='bx bxs-lock-alt' ></i>
+                              <input type="password" placeholder="Enter your password" required>
+                         </div>
+
+                         <div class="text"><a href="#">Forgot password?</a></div>
+
+                         <div class="button input-box">
+                              <input type="submit" value="Login">
+                         </div>
+
+                         <div class="text">Don't have an account?<label for="flip">Signup now</label></div>
+                    </div>
+               </div>
+                <!-- End Left Side Of Form -->
+
+               <!--Right Side Of From --> 
+               <div class="signup-form">
+                    <div class="title">Signup</div>
+                    <div class="input-boxes">
+
+                         <div class="input-box">
+                              <i class='bx bxs-user'></i>
+                              <input type="text" placeholder="Enter your name" required>
+                         </div>
+
+                         <div class="input-box">
+                              <i class='bx bxs-envelope'></i>
+                              <input type="text" placeholder="Enter your email" required>
+                         </div>
+
+                         <div class="input-box">
+                              <i class='bx bxs-lock-alt' ></i>
+                              <input type="password" placeholder="Enter your password" required>
+                         </div>
+
+                         <div class="button input-box">
+                              <input type="submit" value="Signup">
+                         </div>
+
+                         <div class="text">Already have an account?<label for="flip">Login now</label></div>
+                    </div>
+               </div>
+               <!-- End Right Side Of Form -->
+               </div>
+          </form>
+     </div>
+
+     <script src="script.js"></script>
+</body>
+</html>
